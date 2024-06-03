@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -22,6 +27,12 @@ export default defineType({
     defineField({
       name: 'author',
       title: 'Author',
+      type: 'reference',
+      to: {type: 'author'},
+    }),
+    defineField({
+      name: 'illustrator',
+      title: 'Illustrator',
       type: 'reference',
       to: {type: 'author'},
     }),
