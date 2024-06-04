@@ -37,6 +37,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'promptedBy',
+      title: 'Prompted By',
+      type: 'reference',
+      to: {type: 'author'},
+    }),
+    defineField({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
@@ -71,6 +77,12 @@ export default defineType({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+    }),
+    defineField({
+      name: 'related',
+      title: 'Related Stories',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'post'}}],
     }),
   ],
 
