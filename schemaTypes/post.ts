@@ -14,6 +14,10 @@ export default defineType({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'string',
+      validation: (rule) => [
+        rule.required().min(10).error('An excerpt of min. 10 characters is required'),
+        rule.required().max(100).error("Hey! That's too long, pal!"),
+      ],
     }),
     defineField({
       name: 'slug',
@@ -67,6 +71,15 @@ export default defineType({
       title: 'Categories',
       type: 'array',
       of: [{type: 'reference', to: {type: 'category'}}],
+    }),
+    defineField({
+      name: 'storyCycleName',
+      title: 'Story Cycle Name',
+      of: [{type: 'reference', to: {type: 'storyCycle'}}],
+      type: 'array',
+      hidden: ({document}) =>
+        !document?.categories ||
+        !document?.categories?.some((cat) => cat._ref === '840c65b2-d76a-4408-85f6-2fd8baeeb055'),
     }),
     defineField({
       name: 'publishedAt',
