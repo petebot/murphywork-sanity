@@ -74,7 +74,7 @@ export default defineType({
     }),
     defineField({
       name: 'storyCycleName',
-      title: 'Story Cycle Name',
+      title: 'Suite',
       of: [{type: 'reference', to: {type: 'storyCycle'}}],
       type: 'array',
       hidden: ({document}) =>
