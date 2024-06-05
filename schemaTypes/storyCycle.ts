@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'storyCycle',
-  title: 'Suite',
+  title: 'Worm Sets',
   type: 'document',
   fields: [
     defineField({
@@ -11,15 +11,6 @@ export default defineType({
       type: 'string',
       validation: (rule) => [
         rule.required().min(2).error('An excerpt of min. 10 characters is required'),
-        rule.required().max(100).error("Hey! That's too long, pal!"),
-      ],
-    }),
-    defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-      validation: (rule) => [
-        rule.required().min(10).error('An excerpt of min. 10 characters is required'),
         rule.required().max(100).error("Hey! That's too long, pal!"),
       ],
     }),
