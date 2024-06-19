@@ -34,6 +34,21 @@ export const pageType = defineType({
       },
     }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      heroHeading: 'hero.heading',
+      heroImage: 'hero.heroImage',
+    },
+    prepare(selection) {
+      const {title, heroHeading, heroImage} = selection
+      return {
+        title: title,
+        subtitle: heroHeading ? `${heroHeading}` : 'No hero heading',
+        media: heroImage,
+      }
+    },
+  },
 })
 
 export default pageType
