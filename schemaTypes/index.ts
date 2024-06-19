@@ -3,5 +3,7 @@ import category from './category'
 import post from './post'
 import author from './author'
 import set from './storyCycle'
+import {heroType} from './heroType'
+import {pageType} from './pageType'
 
-export const schemaTypes = [post, category, set, author, blockContent]
+export const schemaTypes = [pageType, heroType, post, category, set, author, blockContent]
