@@ -62,6 +62,34 @@ export const blockContent = defineType({
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
+      fields: [
+        {
+          title: 'Caption',
+          name: 'caption',
+          type: 'string',
+          options: {isHighlighted: true},
+        },
+        {
+          title: 'Alt text',
+          name: 'alt',
+          type: 'string',
+          options: {isHighlighted: true},
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: 'alignment',
+          type: 'string',
+          title: 'Alignment',
+          options: {
+            list: [
+              {title: 'Full Width', value: 'fullWidth'},
+              {title: 'Left', value: 'left'},
+              {title: 'Right', value: 'right'},
+            ],
+            layout: 'radio', // This will make the options appear as radio buttons
+          },
+        },
+      ],
     }),
   ],
 })
