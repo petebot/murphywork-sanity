@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'worm',
-  title: 'Worm',
+  name: 'work',
+  title: 'Work',
   type: 'document',
   fields: [
     defineField({
@@ -95,7 +95,7 @@ export default defineType({
       name: 'related',
       title: 'Related Stories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'worm'}}],
+      of: [{type: 'reference', to: {type: 'work'}}],
     }),
   ],
 

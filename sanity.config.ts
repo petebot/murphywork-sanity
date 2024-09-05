@@ -6,9 +6,9 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: "Let's Worm",
+  title: 'MurphyWork',
 
-  projectId: 'tukw59bq',
+  projectId: '2mn7rz7g',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool(), draftReviewPluginV3()],
