@@ -9,7 +9,7 @@ export default defineConfig({
   title: 'MurphyWork',
 
   projectId: '2mn7rz7g',
-  dataset: 'production',
+  dataset: 'production1',
 
   plugins: [structureTool(), visionTool(), draftReviewPluginV3()],
 

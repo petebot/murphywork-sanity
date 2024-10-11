@@ -33,12 +33,6 @@ export default defineType({
       title: 'Writer',
       type: 'reference',
       to: {type: 'author'},
-      initialValue: async () => {
-        return {
-          _type: 'reference',
-          _ref: 'e7775278-2daa-41bb-af7a-0cb4868af7a8',
-        }
-      },
     }),
     defineField({
       name: 'promptedBy',
@@ -52,18 +46,6 @@ export default defineType({
       type: 'image',
       options: {
         hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'illustrator',
-      title: 'Illlustrator',
-      type: 'reference',
-      to: {type: 'author'},
-      initialValue: async () => {
-        return {
-          _type: 'reference',
-          _ref: 'b86c021c-01b6-4028-8213-c10514f80ae0',
-        }
       },
     }),
     defineField({

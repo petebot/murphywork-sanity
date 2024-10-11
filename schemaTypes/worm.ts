@@ -36,7 +36,7 @@ export default defineType({
       initialValue: async () => {
         return {
           _type: 'reference',
-          _ref: 'e7775278-2daa-41bb-af7a-0cb4868af7a8',
+          _ref: '3a4ad66a-f0ac-4240-8d9b-6d3c41bdd04a',
         }
       },
     }),
@@ -62,7 +62,7 @@ export default defineType({
       initialValue: async () => {
         return {
           _type: 'reference',
-          _ref: 'b86c021c-01b6-4028-8213-c10514f80ae0',
+          _ref: '54910043-ac41-47be-bb08-b69b03bf0cd0',
         }
       },
     }),
