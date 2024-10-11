@@ -35,6 +35,12 @@ export default defineType({
       to: {type: 'author'},
     }),
     defineField({
+      name: 'illustrator',
+      title: 'Illustrator',
+      type: 'reference',
+      to: {type: 'author'},
+    }),
+    defineField({
       name: 'promptedBy',
       title: 'Prompted By',
       type: 'reference',
