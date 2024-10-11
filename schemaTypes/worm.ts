@@ -33,12 +33,6 @@ export default defineType({
       title: 'Author',
       type: 'reference',
       to: {type: 'author'},
-      initialValue: async () => {
-        return {
-          _type: 'reference',
-          _ref: '3a4ad66a-f0ac-4240-8d9b-6d3c41bdd04a',
-        }
-      },
     }),
     defineField({
       name: 'promptedBy',
@@ -59,12 +53,6 @@ export default defineType({
       title: 'Illlustrator',
       type: 'reference',
       to: {type: 'author'},
-      initialValue: async () => {
-        return {
-          _type: 'reference',
-          _ref: '54910043-ac41-47be-bb08-b69b03bf0cd0',
-        }
-      },
     }),
     defineField({
       name: 'categories',
@@ -77,9 +65,7 @@ export default defineType({
       title: 'Suite',
       of: [{type: 'reference', to: {type: 'storyCycle'}}],
       type: 'array',
-      hidden: ({document}) =>
-        !document?.categories ||
-        !document?.categories?.some((cat) => cat._ref === '840c65b2-d76a-4408-85f6-2fd8baeeb055'),
+      hidden: ({document}) => !document?.categories,
     }),
     defineField({
       name: 'publishedAt',

@@ -59,9 +59,7 @@ export default defineType({
       title: 'Suite',
       of: [{type: 'reference', to: {type: 'storyCycle'}}],
       type: 'array',
-      hidden: ({document}) =>
-        !document?.categories ||
-        !document?.categories?.some((cat) => cat._ref === '840c65b2-d76a-4408-85f6-2fd8baeeb055'),
+      hidden: ({document}) => !document?.categories,
     }),
     defineField({
       name: 'publishedAt',
